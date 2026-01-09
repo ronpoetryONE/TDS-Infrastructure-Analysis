@@ -105,4 +105,11 @@ El dominio `jnmbmw.hottview.net` es una infraestructura hostil activa. No presen
 **Acciones Recomendadas:**
 1.  Bloquear el dominio y la IP `99.192.225.63` en firewalls perimetrales.
 2.  Investigar logs de tráfico en busca de conexiones a endpoints `/pixel` o `/click`.
-3.  Educar a los usuarios sobre formularios de reporte falsos que aparecen tras "alertas de virus".
+
+---
+
+## 6. Publicación de Inteligencia (OTX)
+Esta investigación ha sido publicada en **AlienVault Open Threat Exchange (OTX)** para contribuir a la defensa colectiva.
+*   **Pulse ID:** `6961278a4a8bd4de7b59d32d`
+*   **Enlace al Pulse:** [TDS Infrastructure: jnmbmw.hottview.net](https://otx.alienvault.com/pulse/6961278a4a8bd4de7b59d32d)
+
