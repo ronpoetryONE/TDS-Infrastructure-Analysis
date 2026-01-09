@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Report Abuse</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+    <script>
+        // Reversed logic from the malicious site
+        function ValidEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function sendForm() {
+            var email = document.getElementById('email').value;
+            // Simplified Captcha logic for simulation
+            var vCapcha = true;
+            var vEmail = ValidEmail(email);
+
+            if (!vEmail) {
+                alert("Wrong email format!");
+            } else if (vCapcha && vEmail && confirm("We are sorry for providing bad internet experience for you. Here you can leave a complain due to spam or malware websites. Our tech team will do our best to find and ban that spam website. The process of verification will take up to 3 wok days. Thank you for beeing responsible.")) {
+                // This simulates the redirect we saw
+                document.location = "/report?email=" + email + "&campUrl=" + encodeURIComponent("");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Report Spam / Malware</h1>
+        <p>Please enter your email to verify your report.</p>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <br>
+        <button onclick="sendForm()">Submit Report</button>
+    </div>
+</body>
+
+</html>
